@@ -12,7 +12,9 @@ string = options.string
 
 print(url)
 print(string)
-
+if(url):
+    print(True)
+    
 try:
     page = requests.get(url)
 except:
