@@ -28,5 +28,6 @@ except:
     print("[-] Error accessing the website. Please verify the url and try again")
     exit()
 
+print("[+] All set, beginning search...")
 rawHtml = BeautifulSoup(page.content, "html.parser")
 print(rawHtml)
