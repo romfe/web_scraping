@@ -13,9 +13,9 @@ string = options.string
 if(not url):
     print("[-] Please inform the url with the flag -u")
     exit()
-    elif( "http://" in url) or ("https://" in url):
-        print("[-] Please include either http:// or https:// in the provided url")
-        exit()
+elif(("http://" in url) or ("https://" in url)):
+    print("[-] Please include either http:// or https:// in the provided url")
+    exit()
 
 
 if(not string):
