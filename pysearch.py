@@ -13,7 +13,7 @@ string = options.string
 if(not url):
     print("[-] Please inform the url with the flag -u")
     exit()
-elif(("http://" in url) or ("https://" in url)):
+elif(("http://" not in url) and ("https://" not in url)):
     print("[-] Please include either http:// or https:// in the provided url")
     exit()
 
