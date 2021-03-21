@@ -10,10 +10,17 @@ parser.add_option("-s", "--string", dest = "string", help = "string to search fo
 url = options.url
 string = options.string
 
-print(url)
-print(string)
-if(url):
-    print(True)
+if(not url):
+    print("[-] Please inform the url with the flag -u")
+    exit()
+    elif( "http://" in url) or ("https://" in url):
+        print("[-] Please include either http:// or https:// in the provided url")
+        exit()
+
+
+if(not string):
+    print("[-] Please inform the search string with the flag -s")
+    exit()
     
 try:
     page = requests.get(url)
